@@ -45,19 +45,20 @@ module tt_um_VanceWiberg_top (
   sar_adc mySAR 
     (
     .clk_i(clk),
-    .start_i(1'b1),
+    .start_i(ui_in[1]),
     .rst_ni(rst_n),
     .comp_i(ui_in[0]),
     .rdy_o(eco),
     .dac_o(uo_out)
     );
 
+    assign uio_oe [7:1] = 0;
+    assign uio_oe = [0] = 1'b1;
     assign uio_out [7:1] = 0;
     assign uio_out [0] = eco;
-    assign uio_oe = 0;
 
   // List all unused inputs to prevent warnings
-  wire _unused = &{ena, uio_out [7:1], uio_oe};
+  wire _unused = &{ena, uio_out[7:1], uio_oe[7:1]};
 
 endmodule
 
