@@ -1,4 +1,4 @@
-/*
+
 `default_nettype none
 `timescale 1ns / 1ps
 
@@ -38,7 +38,8 @@ module tb ();
       .clk    (clk),      // clock
       .rst_n  (rst_n)     // not reset
   );
-	  
+endmodule
+/*	  
 initial begin 
   ui_in = 8'b00000010;
   uio_in = 8'b0;
@@ -110,7 +111,7 @@ end
   );
 endmodule
 */
-
+/*
 `timescale 1ns/1ns
 
 module tb();
@@ -224,3 +225,4 @@ initial begin
 end	
 	
 endmodule
+*/
