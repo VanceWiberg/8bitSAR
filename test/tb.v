@@ -113,7 +113,7 @@ endmodule
 
 `timescale 1ns/1ns
 
-module template_tb();
+module tb();
 
 	
 reg [7:0] ui_in;
@@ -220,7 +220,7 @@ end
 //handle simulation
 initial begin
   $dumpfile("tb.vcd");  
-  $dumpvars(0, template_tb);
+  $dumpvars(0, tb);
 end	
 	
 endmodule
