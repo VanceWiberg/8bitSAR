@@ -152,7 +152,7 @@ reg rst_n;
       .rst_n  (rst_n)     // not reset
   );
 	  
-	
+/*	
 //tt_um_VanceWiberg_top dut(.*);
 
 initial begin 
