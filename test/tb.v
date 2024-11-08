@@ -38,6 +38,8 @@ module tb ();
       .ena    (ena),      // enable - goes high when design is selected
       .clk    (clk),      // clock
       .rst_n  (rst_n)     // not reset
+  );
+	  
 initial begin 
   ui_in = 8'b00000010;
   uio_in = 8'b0;
