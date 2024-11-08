@@ -151,7 +151,7 @@ reg rst_n;
       .clk    (clk),      // clock
       .rst_n  (rst_n)     // not reset
   );
-	  
+endmodule	  
 /*	
 //tt_um_VanceWiberg_top dut(.*);
 
