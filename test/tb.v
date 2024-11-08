@@ -1,4 +1,4 @@
-
+/*
 `default_nettype none
 `timescale 1ns / 1ps
 
@@ -110,12 +110,17 @@ end
 
   );
 endmodule
+*/
 
-/*
 `timescale 1ns/1ns
 
 module tb();
 
+//handle simulation
+initial begin
+  $dumpfile("tb.vcd");  
+  $dumpvars(0, tb);
+end	
 	
 reg [7:0] ui_in;
 wire [7:0] uo_out;
@@ -218,11 +223,7 @@ else begin
 end
 end
 
-//handle simulation
-initial begin
-  $dumpfile("tb.vcd");  
-  $dumpvars(0, tb);
-end	
+
 	
 endmodule
-*/
+
