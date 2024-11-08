@@ -112,10 +112,10 @@ endmodule
 */
 
 `timescale 1ns/1ns
-`include "project.v"
 
 module template_tb();
 
+	
 reg [7:0] ui_in;
 wire [7:0] uo_out;
 reg [7:0] uio_in;
@@ -124,7 +124,29 @@ wire [7:0] uio_oe;
 reg ena;
 reg clk;
 reg rst_n;
-
+	
+`ifdef GL_TEST
+  wire VPWR = 1'b1;
+  wire VGND = 1'b0;
+`endif
+  // Replace tt_um_example with your module name:
+  tt_um_VanceWiberg_top project (
+      // Include power ports for the Gate Level test:
+`ifdef GL_TEST
+      .VPWR(VPWR),
+      .VGND(VGND),
+`endif
+      .ui_in  (ui_in),    // Dedicated inputs
+      .uo_out (uo_out),   // Dedicated outputs
+      .uio_in (uio_in),   // IOs: Input path
+      .uio_out(uio_out),  // IOs: Output path
+      .uio_oe (uio_oe),   // IOs: Enable path (active high: 0=input, 1=output)
+      .ena    (ena),      // enable - goes high when design is selected
+      .clk    (clk),      // clock
+      .rst_n  (rst_n)     // not reset
+  );
+	  
+	
 tt_um_VanceWiberg_top dut(.*);
 
 initial begin 
