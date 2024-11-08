@@ -147,7 +147,7 @@ reg rst_n;
   );
 	  
 	
-tt_um_VanceWiberg_top dut(.*);
+//tt_um_VanceWiberg_top dut(.*);
 
 initial begin 
   ui_in = 8'b00000010;
