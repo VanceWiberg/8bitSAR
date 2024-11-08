@@ -1,3 +1,4 @@
+/*
 module sar_adc (
     input wire clk_i,                 // Clock input
     input wire start_i,               // Start conversion signal
@@ -88,3 +89,4 @@ module sar_adc (
     assign rdy_o = (state_q == DONE);
 
 endmodule
+*/
