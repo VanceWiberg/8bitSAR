@@ -11,7 +11,7 @@ project:
   tiles: "1x1"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
 
   # Your top module name must start with "tt_um_". Make it unique by including your github username:
-  top_module:  "tt_um_VanceWiberg_top"
+  top_module: "tt_um_VanceWiberg_top"
     
 
   # List your project's source files here.
@@ -19,7 +19,6 @@ project:
   # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
   source_files:
     - "project.v"
-    - "sar_adc.v"
 
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
