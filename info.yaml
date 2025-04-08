@@ -3,7 +3,7 @@ project:
   title:        "Team 17's 8 bit DAC"      # Project title
   author:       "Vance Wiberg"      # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "This 8 bit digital to analogue converter uses a SAR to convert signals from Digial into Analoge"      # One line description of what your project does
+  description:  "This 8 bit digital to analogue converter uses a SAR to convert signals from Digial into Analog"      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz:     0       # Clock frequency in Hz (or 0 if not applicable)
 
